@@ -1,0 +1,117 @@
+h1{
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: bolder; /* remet les titres en gras enlevé par le reset */
+	margin-bottom: 1rem; /* espace en dessous des titres */
+	padding-top:  1rem;
+	background-color: #A38A7C;
+	padding-bottom: 1rem;
+}
+
+#container-principal{ /* container regroupant aside et section */
+	display:flex; 
+	flex-direction: column; /* place les differents éléments les uns en dessous des autres */ 	
+}
+
+#container-principal > *{ 
+	margin:0;
+	padding:1rem;
+}
+
+a{
+	color:black;
+	text-decoration: none; /* enleve  le trait de soulignement des liens */
+}	
+
+.txtbold{
+	font-weight: bold;
+	margin:1rem 0 0.5rem 0;
+}
+
+.contact,.formulaire{
+	background-color: #AAD5DF;	
+	text-align:center;
+	margin-top:1rem;
+	flex-basis: calc(100% / 12 * 12 - 1rem );
+	border:1px #A38A7C solid;
+}
+
+.contact p:last-child{
+	padding-bottom: 1rem;
+}
+
+.formulaire p{
+	padding: 0.5rem;
+}
+
+/**********************************************
+			Premier point de rupture
+***********************************************/
+
+@media(min-width: 500px){ 
+
+	body{
+		max-width: 679px;
+	}
+
+	.groupe{
+		display:flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: 	space-between;	
+	}
+
+	.map{
+		flex-basis: calc(100% / 12 * 12);
+	}
+
+	.contact,.formulaire{
+		flex-basis: calc(100% / 12 * 6 - 0.5rem);	
+	}	
+}
+	
+/**********************************************
+			second point de rupture
+***********************************************/
+
+@media(min-width: 680px){ 
+
+	body{
+		max-width: 1024px;
+	}
+
+	form{
+		display: flex;
+		flex-direction: row;
+	}
+	
+	.contact{
+		flex-basis: calc(100% / 12 *5 - 0.5rem);
+	}
+
+	.formulaire{
+		flex-basis: calc(100% / 12 *7 - 0.5rem);
+	}
+
+	.first{
+		flex-basis: calc(50%);
+	}
+
+	.second{
+		flex-basis: calc(50%);
+	}	
+}
+
+
+
+		
+	
+	
+/**********************************************
+			taille max
+***********************************************/
+@media(min-width: 1025px){ 
+	body{
+		max-width: 100%;
+	}
+	
+}

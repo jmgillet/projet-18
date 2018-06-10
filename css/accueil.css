@@ -1,0 +1,82 @@
+
+img{
+	max-width:100%;	
+}
+
+.slide{	
+	width:100%;
+	overflow: hidden;
+}
+
+h1{
+	font-size:1.6rem;
+	font-weight: bold;
+}
+
+.container-img{
+	display:flex;
+	flex-wrap: wrap;
+	width:100%;
+	margin:auto;	
+	position: relative;	
+}
+
+.gazzda{
+	flex-basis: calc(100% /12 * 9 );
+}
+
+.shop,.liam,.vita,.showroom,.corner{
+	flex-basis: calc(100% / 12 * 3);	
+}
+
+
+.txt{
+	position:absolute;
+	width:150px;
+	top:100px;
+	left:450px;
+	display:none;	
+}
+.corner {
+	display:flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+
+.corner img {
+	width:65%;
+}
+
+
+/************************POINT DE RUPTURE *******************/
+
+@media(min-width: 600px){  
+	
+	body{
+		max-width: 1024px;
+	}
+
+	.container-img{
+		display:flex;
+		flex-wrap: wrap;
+		max-width:600px;
+		margin:auto;	
+		position: relative;	
+	}
+
+	.txt{
+		display:block;
+		padding:0.5rem;
+	}	
+}
+
+/**********************************************
+			taille max
+***********************************************/
+@media(min-width: 1025px){  
+
+	body{
+		max-width: 100%;
+	}
+	
+}

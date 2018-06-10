@@ -1,0 +1,175 @@
+
+h1,h2{
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: bolder; /* remet les titres en gras enlevé par le reset */
+	margin-bottom: 1rem; /* espace en dessous des titres */
+	color:#AAD5DF;	
+}
+
+img{
+	max-width: 100%;
+}
+
+#container-principal{ /* container regroupant aside et section */
+	display:flex; 
+	flex-direction: column; /* place les differents éléments les uns en dessous des autres */ 		
+}
+
+#container-principal > *{ 
+	margin:0;
+	padding:1rem;
+}
+
+a{
+	color:black;
+	text-decoration: none;
+}
+
+.bombay{
+	border:2px #AAD5DF solid;	
+	border-radius: 25px;
+	display:flex;
+	flex-wrap: wrap	;
+	justify-content: flex-end;	
+	justify-content: center;
+}
+
+.info{
+	flex-basis: calc(100% / 12 * 12); 
+	padding:1rem;
+}
+
+.gd_img{	
+	flex-basis: calc(100% / 12 * 10);
+} 
+
+.galery{
+	flex-basis: calc(100% / 12 * 12); 
+	display:flex;	
+}
+
+.img{
+	max-width: 80%;
+}
+
+.ghost{
+	display:none;
+}
+
+.prix{
+	display: flex;
+	justify-content:  center;
+	background-color: #AAD5DF;
+	align-items: center;
+	font-size: 2rem;
+	flex-basis: calc(100% / 12 * 12);
+	font-weight: 	bold;
+	color:#A38A7C;
+	margin:1rem;
+	border-radius: 25px;
+}
+
+/**********************************************
+			Premier point de rupture
+***********************************************/
+
+
+@media(min-width: 500px){ 
+
+	body{
+		max-width: 700px;
+	}
+
+	.bombay{
+		display:flex;
+		flex-direction: row-reverse;
+		flex-wrap: wrap	;
+		justify-content: flex-end;	
+	}
+
+	.info{
+		display:flex;
+		flex-direction: column;
+		flex-basis: calc(100% / 12 * 5); 
+		justify-content:  center;
+	}
+
+	.gd_img{
+		display: flex;
+		flex-basis: calc(100% / 12 * 6); 
+		align-items: center;
+	}
+
+	.galery{
+		
+		display:flex;
+		flex-direction: column;
+		flex-basis: calc(100% / 12 * 1);
+		justify-content: space-around;		
+	}
+
+	.ghost{
+		display:block;		
+	}
+
+	.prix{
+		display: flex;		
+		font-weight: bolder;
+		font-size: 2rem;
+		width: 100px;
+		height:30px;		
+		flex-basis: calc(100% / 12 * 12);
+	}
+	
+	
+}
+/**********************************************
+			Second point de rupture
+***********************************************/
+
+@media(min-width: 701px){
+
+	body{
+		max-width: 1024px;
+	}
+
+	.info{
+		display:flex;
+		flex-direction: column;
+		flex-basis: calc(100% / 12 * 5);
+		justify-content:  center;
+	}
+
+	.gd_img{
+		display: flex;
+		flex-basis: calc(100% / 12 * 5); 
+		align-items: center;
+	}
+
+	.galery{
+		display: flex;
+		flex-basis: calc(100% / 12 * 1); 
+		align-items: center;
+	}
+
+	.info>*{
+		padding:1rem;
+		border:2px double #AAD5DF;
+		border-radius: 20px;
+	}
+
+	.bombay{
+		max-width: 90rem;
+		margin:auto;
+	}
+}
+/**********************************************
+			taille max
+***********************************************/
+@media(min-width: 1025px){ 
+
+	body{
+		max-width: 100%;
+	}
+	
+}

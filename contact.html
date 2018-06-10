@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Contact</title> 
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/first-party.css">
+        <link rel="stylesheet" href="css/contact.css"> 
+        <!--<link rel="stylesheet" href="grid.css">-->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">      
+    </head>
+    <body>
+        <div class="container-header">
+            <header>
+                <img class="logo" src="img/logo.png" alt="logo">
+                <div class="centrage_search">                    
+                    <input type="search" placeholder="Entrez un mot-clef" name="search">
+                    <input type="submit" name="submit" value="OK" class="submit">                    
+                </div>
+                <div class="cf"></div>
+            </header>
+        </div>
+            <div class="line"></div>
+        <div class="container-header">
+        <div class="centrage">
+                <div class="bouton"><a href="catalogue.html">Catalogue</a></div>                                    
+                <div class="bouton"><a href="contact.html">Contact</a></div>  
+            </div>                      
+            <nav>
+                <div class="navigation"><a href="index.html">Accueil</a></div>
+                <div class="navigation"><a href="catalogue.html">Catalogue</a></div>
+                <div class="navigation"><a href="#">Luminaires</a></div>
+                <div class="navigation"><a href="#">Accessoires</a></div>
+                <div class="navigation"><a href="contact.html">Contact</a></div>
+            </nav>
+        </div>
+            <div class="fil_ar">
+                <a class="lien" href="index.html">Accueil</a> >>> <a class="lien" href="contact.html">Contact</a>                 
+            </div> 
+       
+
+        <main id="container-principal">   
+            <div class="groupe">         
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d20241.132075920912!2d5.560469!3d50.643063!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c0fa164d5c4969%3A0xd379a00de93c696!2sRue+St+Laurent+33%2C+4000+Li%C3%A8ge!5e0!3m2!1sfr!2sbe!4v1527488914581" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+
+                <div class="contact">
+                	<h1>Infos contact !</h1>
+                	<p class="txtbold">Adresse</p>
+                	<p>33 Rue Saint-Laurent 4000 Liège</p>
+                	<p class="txtbold">Email</p>
+                	<a href="mailto:isl@info.com">Contactez-moi</a>
+                	<p class="txtbold">Tel</p>
+                	<p>04/223.11.31</p>
+                	<p class="txtbold">Site</p>
+                	<p><a href="http://www.isl.be/portfolio_item/formation-web-developer-webmaster/" target="_blank">www.isl.be</a></p> 	
+                </div>
+
+                <div class="formulaire">
+                	<h1>Formulaire</h1>
+                	<form action="contact.php" method="post">
+                		<div class="first">
+                			<p>Nom *<br /><input type="text" name="nom" value="" placeholder="Dupont"></p>
+    	            		<p>Prénom *<br /><input type="text" name="prenom" value="" placeholder="Jean"></p>
+    	            		<p>Email *<br /><input type="text" name="email" value="" placeholder="jeandupont@email.be"></p>
+    	            	</div>
+                		<div class="second">
+                			<p>Message *<br /><textarea placeholder="Bonjour,"></textarea></p>
+            				<p><br /><input type="submit" name="envoyer"></p>
+            			</div>
+                	</form>
+                	<p>* Champ obligatoire</p>            	
+                </div>   
+            </div>                     
+        </main>         
+   </body>
+</html>

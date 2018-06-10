@@ -1,0 +1,131 @@
+*{
+	box-sizing: border-box; /* adapte le contenu a son conteneur quand on ajoute du padding*/
+}
+html{
+	font-size: 62.5%; /* facilite la conversion des px en rem */
+}
+body{
+	font-size: 1.6rem;
+	font-family: calibri,verdana,"sans serif";
+	color:black;
+	background-color: #fff;
+	margin:auto;	
+}
+
+/******************Header**********************/
+.logo{
+	max-width: 100%;  
+}
+/* mise en place de la barre de recherche (centrée en vue mobile)*/
+
+.centrage_search{
+	width:22rem;
+	margin:1rem auto;
+}
+
+.submit{
+	background-color: #AAD5DF;
+}
+
+.cf{
+	clear:both;
+}
+
+/*******************nav***********************/
+nav{
+	margin: 1rem;
+	padding:1rem;
+	display:none;
+}
+
+.navigation {
+	padding:0 1.5rem;
+}
+
+a{
+	color:black;
+	text-decoration: none; 
+}
+
+/****************ligne en dessous du header*****************/
+.line{
+	border-top: solid #A38A7C 1px;	
+}
+
+/**************fil d'ariane*******************/
+.fil_ar{ 	
+	padding:2rem;				
+	background-color: #AAD5DF;	
+}	
+
+.bouton{
+	padding:6px 0 6px 0;
+	border-radius:8px;
+	border:solid 3px #AAD5DF;
+	width:110px;
+	cursor:pointer;
+	text-transform:capitalize;
+	margin: 2rem auto 1rem;
+	text-align: center;
+	display:inline-block;
+}
+
+.centrage{
+	width:226px;
+	margin:auto;
+}
+
+/**********************************************
+			Premier point de rupture
+***********************************************/
+
+@media(min-width: 500px){ 
+
+	body{
+		max-width: 1024px;
+	}
+
+	/*******************placer la barre de recherche a droite**************/
+	.centrage_search{
+		float: right;
+		margin :1rem;
+	}
+	
+	/**************apparition de la nav***************/
+
+	nav{
+		display: block; /* affiche la nav */
+		display:flex;
+		justify-content: space-around; /* donne la disposition des items de la nav */
+	}
+
+	.navigation:hover{	
+		border-bottom : #552a20 solid 1px; /* souligne les items de la nav au survol de la souris */
+	}
+	
+	/*****************logo retrécissement******************/
+	.logo{
+		max-width: 50%;  
+	}
+
+	.bouton{
+		display:none;
+	}		
+}
+/**********************************************
+			Second point de rupture
+***********************************************/
+@media(min-width: 1025px){  
+	
+	body{
+		max-width: 100%;
+	}
+
+	.container-header,#container-principal,.container-img{
+		max-width:1024px;
+		margin:auto;
+	}
+	
+	
+}
+

@@ -1,0 +1,195 @@
+
+h1,h2{
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: bolder; /* remet les titres en gras enlevé par le reset */
+	margin-bottom: 1rem; /* espace en dessous des titres */
+}
+
+h1{
+	color:#AAD5DF;
+	margin:1rem;	
+}
+
+.info p{
+	margin:1rem;
+}
+
+li{
+	font-size: 1.3rem;	
+	font-weight: bold;
+	line-height: 2rem; /* hauteur de ligne */	
+}
+
+ol >li{
+		border-bottom: #552a20 solid 0.5px; /* souligne les items principaux du menu */
+}
+
+li a:hover {
+	cursor:pointer;
+	background-color: #AAD5DF; /* au survol change la couleur des items */
+}
+
+ol>li:hover {
+	cursor:pointer;
+	background-color: #AAD5DF; /* au survol change la couleur des items */
+}
+
+#container-principal{ /* container regroupant aside et section */
+	display:flex; 
+	flex-direction: column; /* place les differents éléments les uns en dessous des autres */ 	
+}
+
+#container-principal > *{ 
+	margin:0;
+	padding:1rem;
+}
+
+.art-chaise img,ul{ 
+	display:none;	/* éléments n'apparaissant pas en mobile first */
+}
+
+.art-chaise{	
+	margin-bottom:1rem; /* espace vertical entre les differents articles */
+	cursor: pointer; 
+	border: 1px solid #A38A7C;	
+}
+
+.art-chaise:hover{
+		/*background-color: lightgreen; /* couleur d'essai lors du survol des articles */
+}
+
+.prix{
+	background-color: #AAD5DF;
+	padding:1rem; /* pour donner de l'épaisseur a la div */
+	width:100%; /* donner a la div la largeur de son conteneur */
+	display:flex; /* donner a la div la propriété flex afin de centrer son contenu */
+	justify-content: flex-end; /* place le prix a l'extrémité de la div */
+}
+
+a{
+	color:black;
+	text-decoration: none; /* enleve  le trait de soulignement des liens */
+}	
+
+
+
+
+/**********************************************
+			Premier point de rupture
+***********************************************/
+
+@media(min-width: 500px){  
+
+	body{
+		max-width: 649px;
+	}
+	
+	.art-chaise img{
+		display:block; /* pour afficher les images de chaises */
+		max-width: 100%; /* les limiter a leur taille maximum */
+	}
+
+	.art-chaise a{
+		display: flex;		
+		flex-wrap:wrap;	/* permet l'affichage du prix a la ligne */
+	}
+	
+	.info{
+		flex-basis: calc(100% / 12 * 7); /* taille de paragraphe de l'article */
+	}
+
+	.img{
+		flex-basis: calc(100% / 12 * 5); /* taille de l'image de l'article */	
+	}
+
+	.prix{
+		flex-basis: calc(100% / 12 * 12); /* taille de la div du prix */
+	}	
+		
+}
+/**********************************************
+			Second point de rupture
+***********************************************/
+@media(min-width: 650px){
+
+	body{
+		max-width: 849px;
+	}
+
+	.section{
+		display:flex;
+		flex-wrap: wrap; /* place les élements sur plusieurs lignes */
+	}
+
+	.art-chaise{
+		flex-basis:calc(100% / 12 * 4 - 1rem); /* trois articles par ligne */
+		margin:0.5rem; /* espace entre les articles */
+		position: relative;	/* position relative  du slide */
+		overflow:hidden; /*  cache le slide en dehors de son conteneur */
+		padding-bottom: 4rem;	/* crée un espace pour le slide */	
+	}
+
+	.art-chaise a{		
+		flex-direction: column-reverse; /* place l'image au dessus du titre */		
+	}	
+
+	.art-chaise .prix{
+		position:absolute;  /* position de la div prix avant le rolover */
+		bottom:0; /* place la div en dessous de l'article */
+		left:-240px; /* placement  gauche de la div (-) , placement  droite de la div (+) */
+		
+		transition: 1s left; /* vitesse du slide */
+	}
+
+	.art-chaise:hover .prix{
+		left:0; /* stop le slide a l'extrême gauche de l'article */
+	}	
+}
+/**********************************************
+			Troisième point de rupture
+***********************************************/
+@media(min-width: 850px){ 
+
+	body{
+		max-width: 1024px;
+	}	
+
+	#container-principal{ 
+		flex-direction: row;	/* changement de disposition du container principal   */	
+	}	
+
+	aside{
+		flex-basis: calc(100% * 3 / 12 ); /* taille du menu placer a gauche des articles */
+	}
+
+	.section{
+		display:flex;
+		flex-basis: calc(100% * 9 / 12);
+	}	
+
+	.art-chaise:hover{
+		box-shadow: inset 0 0 2px 2px #A38A7C; /* crée une ombre interieur au bordure de l'article */		
+		padding:4px; /*padding sur l'article afin de mieux voir l'ombrage */
+	}	
+
+	ul{
+		display:block; /* fait apparaitre les items secondaires */
+		margin-left:3rem; /* création d'un retrait droite sur les items secondaires */
+	}	
+
+	.prix{
+		background-color: #AAD5DF;
+		padding:1rem; /* padding et largeur adapté du la div prix */	
+		width:97%;	
+		margin:0 3px 3px 3px;	
+	}
+}
+/**********************************************
+			taille max
+***********************************************/
+@media(min-width: 1025px){ 
+	body{
+		max-width: 100%;
+	}
+	
+}

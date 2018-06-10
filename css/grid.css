@@ -1,0 +1,44 @@
+.container-principal > .col-1 {
+    flex-basis: calc(100% * 1 / 12 - 2rem) ;
+}
+.container-principal > .col-2 {
+    flex-basis: calc(100% * 2 / 12 - 2rem) ;
+}
+.container-principal > .col-3 {
+    flex-basis: calc(100% * 3 / 12 - 2rem) ;
+}
+.container-principal > .col-4 {
+    flex-basis: calc(100% * 4 / 12 - 2rem) ;
+}
+.container-principal > .col-5 {
+    flex-basis: calc(100% * 5 / 12 - 2rem) ;
+}
+.container-principal > .col-6 {
+    flex-basis: calc(100% * 6 / 12 - 2rem) ;
+}
+.container-principal > .col-7 {
+    flex-basis: calc(100% * 7 / 12 - 2rem) ;
+}
+.container-principal > .col-8 {
+    flex-basis: calc(100% * 8 / 12 - 2rem) ;
+}
+.container-principal > .col-9 {
+    flex-basis: calc(100% * 9 / 12 - 2rem) ;
+}
+.container-principal > .col-10 {
+    flex-basis: calc(100% * 10 / 12 - 2rem) ;
+}
+.container-principal > .col-11 {
+    flex-basis: calc(100% * 11 / 12 - 2rem) ;
+}
+.container-principal > .col-12 {
+    flex-basis: calc(100% * 12 / 12 - 2rem);
+}
+
+
+            
+        
+            
+
+
+        
